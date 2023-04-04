@@ -4,27 +4,33 @@ const Parent = styled.div`
 display: flex;
 `
 
-const ChildOne = styled.div`
+const Child = styled.div`
 width: 100px;
 height: 100px;
-background-color:lavender;
+background-color:${(props) => props.bgColor};
 `
 
-const ChildTwo = styled.div`
-width: 100px;
-height: 100px;
-background-color:lightcoral;
+
+// styled component의 함수형 사용
+const Circle = styled(Child)`
+border-radius:100px;
 `
+
+// const ChildTwo = styled.div`
+// width: 100px;
+// height: 100px;
+// background-color:lightcoral;
+// `
 
 const Text = styled.h3``
 
 function App() {
   return (
   <Parent>
-    <ChildOne>
+    <Child bgColor="lavender">
       <Text>hello</Text>
-    </ChildOne>
-    <ChildTwo />
+    </Child>
+    <Circle bgColor="whitesmoke" />
   </Parent>);
 }
 
