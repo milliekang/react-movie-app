@@ -1,50 +1,41 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const rotateAnimation = keyframes`
+from{
+  transform:rotate(0deg);
+}
+to{
+  transform: rotate(360deg);
+  border-radius:100px;
+}
+`
 
 const Parent = styled.div`
 display: flex;
 `
 
-const Child = styled.div`
-width: 100px;
+const Box = styled.div`
+display: flex;
+align-items:center;
+justify-content:center;
 height: 100px;
-background-color:${(props) => props.bgColor};
-`
-const Button = styled.button`
-color: white;
+width: 100px;
 background: tomato;
-border-radius:50px;
-border:0;
+animation: ${rotateAnimation} 1s linear infinite;
+span{
+  font-size:30px;
+  &:hover{
+    background-color:lavender;
+  }
+}
 `
-
-const Input = styled.input.attrs({required:true, minLength:10})`
-background: tomato;
-`
-
-// styled component의 함수형 사용
-const Circle = styled(Child)`
-border-radius:100px;
-`
-
-// const ChildTwo = styled.div`
-// width: 100px;
-// height: 100px;
-// background-color:lightcoral;
-// `
-
-const Text = styled.h3``
 
 function App() {
   return (
   <Parent>
-    <Child bgColor="lavender">
-      <Text>hello</Text>
-      <Button>Log in</Button>
-      <Button as={"a"} href="#">Log in</Button>
-    </Child>
-    <Circle bgColor="whitesmoke" />
-    <Input />
-    <Input />
-    <Input />
+    <Box>
+      <span>🐣</span>
+    </Box>
   </Parent>);
 }
 
