@@ -14,6 +14,10 @@ const Parent = styled.div`
 display: flex;
 `
 
+const Emoji = styled.span`
+font-size:36px;
+`;
+
 const Box = styled.div`
 display: flex;
 align-items:center;
@@ -22,10 +26,9 @@ height: 100px;
 width: 100px;
 background: tomato;
 animation: ${rotateAnimation} 1s linear infinite;
-span{
-  font-size:30px;
+${Emoji}{
   &:hover{
-    background-color:lavender;
+    font-size:80px;
   }
 }
 `
@@ -34,7 +37,7 @@ function App() {
   return (
   <Parent>
     <Box>
-      <span>🐣</span>
+      <Emoji as="p">🐣</Emoji>
     </Box>
   </Parent>);
 }
