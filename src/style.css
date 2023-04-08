@@ -1,0 +1,57 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+  margin-left: 10px;
+}
+
+button[type="submit"] {
+  margin-left: 10px;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table th {
+  background-color: #eee;
+}
+
+div {
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 10px;
+}
