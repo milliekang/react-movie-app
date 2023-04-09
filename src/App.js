@@ -12,9 +12,14 @@ to{
 
 const Title = styled.h1`
 color: ${props => props.theme.textColor};
+font-size: 36px;
+font-weight: bold;
 `
 
 const Parent = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
 width: 100vw;
 height: 100vh;
 background-color: ${props => props.theme.backgroundColor};
