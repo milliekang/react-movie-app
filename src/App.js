@@ -10,8 +10,14 @@ to{
 }
 `
 
+const Title = styled.h1`
+color: ${props => props.theme.textColor};
+`
+
 const Parent = styled.div`
-display: flex;
+width: 100vw;
+height: 100vh;
+background-color: ${props => props.theme.backgroundColor};
 `
 
 const Emoji = styled.span`
@@ -36,9 +42,10 @@ ${Emoji}{
 function App() {
   return (
   <Parent>
-    <Box>
+    <Title>Hello</Title>
+    {/* <Box>
       <Emoji as="p">🐣</Emoji>
-    </Box>
+    </Box> */}
   </Parent>);
 }
 
