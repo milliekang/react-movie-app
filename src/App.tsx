@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import ReactDOM from "react-dom/client"
 
 const rotateAnimation = keyframes`
 from{
